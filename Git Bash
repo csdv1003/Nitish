@@ -1,0 +1,100 @@
+nitis@Nitish MINGW64 ~
+$ cd D:
+
+nitis@Nitish MINGW64 /d
+$ mkdir git2
+
+nitis@Nitish MINGW64 /d
+$ cd git2
+
+nitis@Nitish MINGW64 /d/git2
+$ git init
+Initialized empty Git repository in D:/git2/.git/
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ ls -ah
+./  ../  .git/
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ vi file2.txt
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ cat file2.txt
+file text
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git add .
+warning: LF will be replaced by CRLF in file2.txt.
+The file will have its original line endings in your working directory
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git -m
+unknown option: -m
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git commit -m "firstc"
+[master (root-commit) 86c48d8] firstc
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ vi file3.cpp
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git add .
+warning: LF will be replaced by CRLF in file3.cpp.
+The file will have its original line endings in your working directory
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git commit -m "secondc"
+[master 56fb1f7] secondc
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3.cpp
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git remote add origin https://github.com/nit29sin/lab2.git
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git config --global user.name "nit29sin"
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git config --global user.email "nitish29singla@gmail.com"
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git push -u origin master
+fatal: unable to access 'https://github.com/nit29sin/lab2.git/': Could not resolve host: github.com
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git push -u origin master
+fatal: unable to access 'https://github.com/nit29sin/lab2.git/': Could not resolve host: github.com
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git push -u origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 461 bytes | 153.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/nit29sin/lab2.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+nitis@Nitish MINGW64 /d/git2 (master)
+$ git log
+commit 56fb1f799180d1b913aed58eb987a7562f2335a7 (HEAD -> master, origin/master)
+Author: nit29sin <nitish29singla@gmail.com>
+Date:   Sat Feb 2 14:37:26 2019 +0530
+
+    secondc
+
+commit 86c48d8da0b684d58639c692f98720d72dc5547a
+Author: nit29sin <nitish29singla@gmail.com>
+Date:   Sat Feb 2 14:35:56 2019 +0530
+
+    firstc
